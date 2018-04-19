@@ -7,13 +7,15 @@
       <th>Action</th>
       <th>Amount</th>
       <th>Value</th>
+      <th></th>
     </tr>
   </thead>
     <tbody>
-      <tr>
-        <td>To be filled</td>
-        <td>To be filled</td>
-        <td>To be filled</td>
+      <tr *ngFor="let e of transactions">
+        <td>{{e.action}}</td>
+        <td>{{e.amount}}</td>
+        <td>{{e.value}}</td>
+        <button (click)='details(e)'>Details</button>
       </tr>
     </tbody>
 </table>

@@ -2,7 +2,8 @@
 <h4>Here you can mine ShintoCoins by being the first to solve the algorithm: </h4>
 <h4>What is the 7th Fibonacci sequence number?</h4>
 
+<p *ngIf="msg.length > 0">{{msg}}</p>
 <form (submit)="componentMineCoin()">
-<input type="number">
+<input type="number" [(ngModel)]="guess" name="guess">
 <button>Mine</button>
 </form>

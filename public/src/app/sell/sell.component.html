@@ -1,7 +1,7 @@
 <h1>Sell ShintoCoins</h1>
 <h4>Current ShintoCoin Value: ${{value}}.00</h4>
 <h4>Number of ShintoCoins Owned: {{amount}}</h4>
-
+<p *ngIf="msg.length > 0">{{msg}}</p>
 <form (submit)="componentSellCoin()">
   <input type="number" name="amount" [(ngModel)]="selling">
   <button>Sell</button>
