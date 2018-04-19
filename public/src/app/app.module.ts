@@ -14,6 +14,7 @@ import { MineComponent } from './mine/mine.component';
 import { BuyComponent } from './buy/buy.component';
 import { SellComponent } from './sell/sell.component';
 import { LedgerComponent } from './ledger/ledger.component';
+import { LedgerDetailsComponent } from './ledger-details/ledger-details.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { LedgerComponent } from './ledger/ledger.component';
     MineComponent,
     BuyComponent,
     SellComponent,
-    LedgerComponent
+    LedgerComponent,
+    LedgerDetailsComponent
   ],
   imports: [
     BrowserModule,

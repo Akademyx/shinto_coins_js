@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-sell',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sell.component.css']
 })
 export class SellComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  value = 0;
+  amount = 0;
+  selling = 0;
+  constructor(private _httpService: HttpService) { }
+  ngOnInit(){
+    console.log("We hit component of sell!")
+    this.componentGetData()
   }
-
+  componentGetData(){
+    let obs = this._httpService.getData()
+    this.value = obs.value;
+    this.amount = obs.amount;
+  }
+  componentSellCoin(){
+    let obs = this._httpService.sellCoin(this.selling)
+    // console.log("We now hit Sell Coin", this.selling)
+    this.value = obs.value;
+    this.amount = obs.amount;
+  }
 }
