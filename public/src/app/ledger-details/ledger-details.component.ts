@@ -16,6 +16,6 @@ export class LedgerDetailsComponent implements OnInit {
   getOneTrans(){
     let obs = this._httpService.getOneTransaction()
     this.oneObj = obs
-    console.log("This is what we get back when we land on this page", obs)
+    // console.log("This is what we get back when we land on this page", obs)
   }
 }

@@ -21,7 +21,7 @@ export class LedgerComponent implements OnInit {
   }
 
   details(obj){
-    console.log(obj)
+    // console.log(obj)
     let obs = this._httpService.getDetails(obj)
     this._router.navigate([`/transaction/${obj.id}`])
   }
